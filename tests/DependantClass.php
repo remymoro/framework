@@ -1,8 +1,8 @@
 <?php
+
 namespace Projetmvc\PhpFrameworkPro\Tests;
 
 use Projetmvc\PhpFrameworkPro\Tests\DependencyClass;
-
 
 class DependantClass
 {

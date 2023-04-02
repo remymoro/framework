@@ -1,11 +1,11 @@
 <?php
+
 namespace Projetmvc\PhpFrameworkPro\Container;
 
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ProjetMvc\PhpFrameworkPro\Tests\DependantClass;
-
 
 class Container implements ContainerInterface
 {
@@ -44,7 +44,7 @@ class Container implements ContainerInterface
         return $object;
     }
 
-  
+
 
     // Résoudre les dépendances d'une classe et retourner une instance de cette classe
     private function resolve($class): object
@@ -90,8 +90,8 @@ class Container implements ContainerInterface
 
             // On ajoute l'objet créé au tableau de dépendances
             $classDependencies[] = $service;
-             // 3. Return the classDependencies array
-             // On renvoie le tableau de dépendances, qui sera utilisé comme argument pour la méthode newInstanceArgs() de ReflectionClass.
+            // 3. Return the classDependencies array
+            // On renvoie le tableau de dépendances, qui sera utilisé comme argument pour la méthode newInstanceArgs() de ReflectionClass.
             return $classDependencies;
         }
     }
@@ -101,10 +101,4 @@ class Container implements ContainerInterface
       {
           return array_key_exists($id, $this->services);
       }
-
-
-
 }
-
-
-
