@@ -8,11 +8,11 @@ use FastRoute\RouteCollector;
 use function FastRoute\simpleDispatcher;
 use Projetmvc\PhpFrameworkPro\Http\Request;
 use Projetmvc\PhpFrameworkPro\Http\Response;
-use Projetmvc\PhpFrameworkPro\Routing\Router;
+use Projetmvc\PhpFrameworkPro\Routing\RouterInterface;
 
 class Kernel
 {
-    public function __construct(private Router $router)
+    public function __construct(private RouterInterface $router)
     {
        
     }
