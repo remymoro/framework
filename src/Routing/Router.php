@@ -2,8 +2,8 @@
 namespace Projetmvc\PhpFrameworkPro\Routing;
 
 use FastRoute\RouteCollector;
-use Projetmvc\Framework\Http\Request;
 use function FastRoute\simpleDispatcher;
+use Projetmvc\PhpFrameworkPro\Http\Request;
 
 
 
@@ -13,9 +13,7 @@ class Router implements RouterInterface
     {
         // Create a dispatcher
         $dispatcher = simpleDispatcher(function (RouteCollector $routeCollector) {
-
             $routes = include BASE_PATH . '/routes/web.php';
-
             foreach ($routes as $route) {
                 $routeCollector->addRoute(...$route);
             }
@@ -26,6 +24,7 @@ class Router implements RouterInterface
             $request->getMethod(),
             $request->getPathInfo()
         );
+
 
         [$status, [$controller, $method], $vars] = $routeInfo;
 

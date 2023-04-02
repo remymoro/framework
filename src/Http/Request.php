@@ -1,6 +1,7 @@
 <?php
+namespace Projetmvc\PhpFrameworkPro\Http;
 
-namespace Projetmvc\Framework\Http;
+
 
 class Request
 {
@@ -21,6 +22,8 @@ class Request
 
     public function getPathInfo(): string
     {
+        
+        
         return strtok($this->server['REQUEST_URI'], '?');
     }
 

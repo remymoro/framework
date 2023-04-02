@@ -2,7 +2,8 @@
 
 namespace Projetmvc\PhpFrameworkPro\Routing;
 
-use Projetmvc\Framework\Http\Request;
+use Projetmvc\PhpFrameworkPro\Http\Request;
+
 
 interface RouterInterface
 {
