@@ -6,9 +6,11 @@ use FastRoute\Dispatcher;
 use FastRoute\RouteCollector;
 use Psr\Container\ContainerInterface;
 
-use Projetmvc\PhpFrameworkPro\Http\Request;
-
 use function FastRoute\simpleDispatcher;
+
+use Projetmvc\PhpFrameworkPro\Http\Request;
+use Projetmvc\PhpFrameworkPro\Http\HttpException;
+use Projetmvc\PhpFrameworkPro\Http\HttpRequestMethodException;
 
 class Router implements RouterInterface
 {
@@ -22,7 +24,6 @@ class Router implements RouterInterface
         [$handler, $vars] = $routeInfo;
 
   
-
 
         if (is_array($handler)) {
             [$controllerId, $method] = $handler;
@@ -55,7 +56,7 @@ class Router implements RouterInterface
             $request->getMethod(),
             $request->getPathInfo()
         );
-        
+
         // Handle the different possible outcomes of dispatching the request
         switch ($routeInfo[0]) {
             case Dispatcher::FOUND:

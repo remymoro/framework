@@ -26,6 +26,7 @@
         "league/container": "^4.0.0",
         "symfony/dotenv": "^6.0",
         "symfony/var-dumper": "6.3.x-dev",
-        "phpunit/phpunit": "10.1.x-dev"
+        "phpunit/phpunit": "10.1.x-dev",
+        "twig/twig": "^3.0"
     }
 }
